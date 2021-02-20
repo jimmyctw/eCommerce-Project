@@ -1,0 +1,194 @@
+@import "init";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans+Condensed:wght@300&family=Truculenta&display=swap');
+
+//Color variable
+$clr-alert: #BB0A21;
+$clr-black: #252627;
+$clr-white: #FFF9FB;
+$clr-border: #4B88A2;
+$clr-bg: #D3D4D9;
+
+
+//font variable
+$font-art: 'Inconsolata', monospace;
+$font-info: 'Open Sans Condensed', sans-serif;
+$font-title: 'Truculenta', sans-serif;
+
+
+//general global tag setting
+h1{
+    font-family: $font-art;
+}
+
+ul{
+    margin: 1rem 0;
+}
+li{
+    font-size: 2rem;
+}
+i{
+    font-size: 3rem
+}
+
+//mixin
+@mixin ulStyle {
+    ul{
+        @include flexR;
+        width: 100%;
+        justify-content: center;
+        li a:hover, li a:active, li a:focus{
+            color: $clr-alert;
+        }
+    }
+}
+@mixin btnStyle{
+    button{
+        border: 1px solid $clr-border;
+        background-color: transparent;
+        margin: 1rem;
+        width: 4rem;
+        height: 2rem;
+    }
+    button:hover{
+        color: $clr-white;
+        background-color: $clr-alert;
+    }
+}
+
+
+
+header{
+    @include flexR;
+    @include btnStyle;
+    align-items: center;
+    justify-content: center;
+    >div{
+        padding: 1rem;
+    }
+}
+
+main{
+    @include flexC;
+}
+.products-sec{
+    @include flexC;
+    >div{
+        width: 100%;
+        text-align: center;
+    }
+}
+.search-category{
+    @include ulStyle; 
+    li{
+        font-family: $font-title;   
+        margin: 0 1rem;
+    }
+}
+.products-container{
+    @include flexR;
+    width: 100%;
+    padding: 1rem ;
+    justify-content: center;
+    align-items: flex-start;
+}
+.product-item{
+    @include flexC;
+    width: 15rem;
+    margin: 1.5rem;
+    position: relative;
+    .item-name{
+        width: 100%;
+        padding: .5rem;
+        background-color: $clr-border;
+    }
+    .item-info{
+        width: 55%;
+        background-color: $clr-bg;
+    }
+    img{
+        height: 15rem;
+        object-fit: contain;
+    }
+    button{
+        position: absolute;
+        margin: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.order-sec{
+    @include flexC;
+    text-align: center;
+    width: 100%;
+    .order-box{
+        width: 90%;
+        max-width: 35rem;
+    }
+}
+
+.order-item{
+    @include flexR;
+    padding: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    border-bottom: 1px solid $clr-border;
+    .order-item-info{
+        @include flexR;
+        min-width: 16rem;
+        justify-content: space-between;
+    }
+    span, i, input{
+        font-size: 1.2rem
+    }
+
+    input{
+        width: 2.5rem;
+        border: 1px solid $clr-border; 
+    }
+}
+
+
+
+
+.order-payment{
+    @include flexC;
+    -webkit-animation:swing-in-top-fwd 1s cubic-bezier(.175,.885,.32,1.275) both;animation:swing-in-top-fwd 1s cubic-bezier(.175,.885,.32,1.275) both;
+    .payment-methods{
+	    display: inline-block; 
+        width: 100%;
+        text-align: left;
+    }
+    li, i{
+        font-size: 1.2rem;
+        padding: .5rem 0;
+    }
+}
+
+
+.displayNone{
+    display: none;
+
+}
+
+footer{
+    @include flexC;
+    @include ulStyle;
+    text-align: center;
+    color: $clr-black;
+    font-family: $font-art;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    span{
+        margin-bottom: 1rem;
+    }
+    li{
+        margin: 0 1.5rem;
+    }
+}
+
+
+
+@-webkit-keyframes swing-in-top-fwd{0%{-webkit-transform:rotateX(-100deg);transform:rotateX(-100deg);-webkit-transform-origin:top;transform-origin:top;opacity:0}100%{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);-webkit-transform-origin:top;transform-origin:top;opacity:1}}@keyframes swing-in-top-fwd{0%{-webkit-transform:rotateX(-100deg);transform:rotateX(-100deg);-webkit-transform-origin:top;transform-origin:top;opacity:0}100%{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);-webkit-transform-origin:top;transform-origin:top;opacity:1}}

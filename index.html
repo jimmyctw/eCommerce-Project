@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer type="module"  src="/app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>J's Möbelgeschäft</h1>
+        </div>
+        <div class="header-reset">
+            <button class="header-reset" id="resetBtn">Reset</button>
+        </div>
+    </header>
+    <main>
+        <section class="products-sec" id="productsSec">
+            <div class="products-title">
+                <h1>You are lookin for...</h1>
+            </div>
+            <div class="search-category">
+                <ul class="search-category-container" id="searchCategoryContainer">
+                    <li class="search-category" id="all"><a href="#!">All</a></li>
+                    <li class="search-category" id="tableware"><a href="#!">Tableware</a></li>
+                    <li class="search-category" id="kitchenware"><a href="#!">Kitchenware</a></li>
+                    <li class="search-category" id="furniture"><a href="#!">Furniture</a></li>
+                    <li class="search-category" id="others"><a href="#!">Others</a></li>
+                </ul>
+            </div>
+            <div class="products-container" id="producsContainer">
+                <!-- <div class="product-item">
+                    <div class="item-name">
+                        <h1>chopstick</h1>
+                    </div>
+                    <div class="item-img">
+                        <img src="/img/item1.png" alt="">
+                    </div>
+                    <div class="item-info">
+                        <span>Price: $5</span>
+                    </div>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                    </button>
+                </div> -->
+            </div>
+                                                                
+
+
+        </section>
+
+        <section class="order-sec" id="orders">
+            <div class="order-title">
+                <h1>Your Order</h1>
+            </div>
+            <div class="order-box">
+                <div class="order-list" id="orderListContainer"> 
+                    
+                    <!-- <div class="order-item">
+                        <div class="order-item-info">
+                            <span class="item-name">chopstick</span>
+                            <span class="item-price">$ 5</span>
+                        </div>
+                        <div>
+                            <input type="number" class="item-amount" required>
+                            <button class="deleteBtn"><i class="far fa-trash-alt"></i></button>                        
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="payment-price" id="paymentPrice">
+                    <button class="confirm" id="confirmBtn"><i class="fas fa-clipboard-check"></i></button>
+                </div>
+            </div>
+
+            <div class="order-payment displayNone" id="orderPayment" >
+                <ul class="payment-methods">
+                    <li><a href="#!"><i class="fas fa-check-circle"></i>&nbsp; Online Transfer</a></li>
+                    <li><a href="#!"><i class="fas fa-check-circle"></i>&nbsp; Pay with Credit Card</a></li>
+                    <li><a href="#!"><i class="fas fa-check-circle"></i>&nbsp; Pay with Paypal</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <span>Follow us on SMS & get SUPER price!! </span>
+        <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            <li><a href="https://jimmy2.netlify.app/#/" target="_blank"><i class="fas fa-envelope-square"></i></a></li>
+        </ul>
+        <span>All right reserved 2021</span>
+    </footer>
+</body>
+</html>

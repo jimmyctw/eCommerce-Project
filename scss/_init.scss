@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+
+    overflow-x: hidden;
+}
+
+
+
+h1, h2, h3, h4, h5, a, ul, li, span, p{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.4rem;
+}
+h5, p, i, a{
+    font-size: 1.2rem;
+}
+
+
+li, button{
+    cursor: pointer;
+    margin: 0;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover{
+    color: inherit;
+}
+
+input, button, submit { 
+    border:none; 
+    outline: none;
+    background-color: transparent;
+} 
+
+img{
+    width: 100%;
+
+}
+
+footer{
+    width: 100vw;
+}
