@@ -17,10 +17,6 @@ $font-title: 'Truculenta', sans-serif;
 
 
 //general global tag setting
-h1{
-    font-family: $font-art;
-}
-
 ul{
     margin: 1rem 0;
 }
@@ -50,29 +46,39 @@ i{
         width: 4rem;
         height: 2rem;
     }
-    button:hover{
+    button:hover, button:active{
         color: $clr-white;
         background-color: $clr-alert;
     }
 }
-
-
-
 header{
+    background: url(/img/mainbg.png);
+    background-size: cover;
+    background-position: center;
     @include flexR;
-    @include btnStyle;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    >div{
-        padding: 1rem;
+    text-align: center;
+    color: $clr-black;
+    h1{
+        font-family: $font-title;
+    }
+    span{
+        padding: 1rem 0;
+        font-family: $font-art;
     }
 }
 
 main{
+    padding: 2rem 0;
     @include flexC;
+
 }
+
 .products-sec{
     @include flexC;
+    color: $clr-border;
     >div{
         width: 100%;
         text-align: center;
@@ -80,6 +86,7 @@ main{
 }
 .search-category{
     @include ulStyle; 
+
     li{
         font-family: $font-title;   
         margin: 0 1rem;
@@ -100,7 +107,8 @@ main{
     .item-name{
         width: 100%;
         padding: .5rem;
-        background-color: $clr-border;
+        font-size: 1.6rem;;
+        border: 1px solid $clr-border;
     }
     .item-info{
         width: 55%;
@@ -125,6 +133,9 @@ main{
     .order-box{
         width: 90%;
         max-width: 35rem;
+    }
+    .payment-price{
+        margin: 1rem 0;
     }
 }
 
@@ -177,7 +188,7 @@ footer{
     @include flexC;
     @include ulStyle;
     text-align: center;
-    color: $clr-black;
+    color: $clr-border;
     font-family: $font-art;
     font-size: 1.6rem;
     padding-top: 2rem;
