@@ -48,8 +48,8 @@ function priceCalculator(orderItems){
         const orderPrice = (orderItemQuantity * ( orderItemPrice * 10 )) /10
         totalPrice += orderPrice;
     }
-    const itemContent = `<span>Thank you very much for your purchase.</span><br><span>The total amount is $ ${totalPrice}</span>`;
-    const itemClass = 'order-item';
+    const itemContent = `<span >Thank you very much for your purchase.</span><br><span >The total amount is $ ${totalPrice}</span>`;
+    const itemClass = 'order-item alignCenter';
     orderListContainer.innerHTML = '';
     orderTitle.innerHTML = '';
     producsContainer.remove();
@@ -65,6 +65,7 @@ function getCurrentProductsItem(){
             if(!buyItemSet.has(buyBtnId)){
                 orderItemBuild(buyBtnId);
                 buyItemSet.add(buyBtnId);
+                alert('Added!! ^_^')
             }
         })
     }
